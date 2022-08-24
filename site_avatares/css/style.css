@@ -1,0 +1,499 @@
+/*reseteo de estilos predeterminados de los navegadores*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/*estilos de titulos y subtitulos*/
+.titulo{
+    font-size: 45px;
+    font-family: 'Bebas Neue', cursive;
+    color:#9c6785;
+    text-align: center;
+    padding-bottom: 27px;
+}
+.subtitulo{
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+    color:#9c6785;
+}
+.subsubtitulo{
+    font-size: 27px;
+    font-family: 'Bebas Neue', cursive;
+    color:#9c6785;
+}
+/*barra de menú*/
+.encabezado{
+    background-color: #9c6785;
+    display: flex; /*distribuye horizontalmente los elementos del encabezado*/
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 56px;
+    height: 56px;
+    margin: 9px 9px 9px 36px;
+}
+.navbar{
+    width: 100%;
+}
+.menu{
+    list-style: none; /*quita los puntos de los items*/
+    display: flex; /*distribuye horizontalmente los items de la lista*/
+    justify-content: flex-end; /*alinear el contenido horizontalmente y hacia el final*/
+    gap: 45px; /*separa los items de la lista agregando un espacio entre ellos*/
+    width: 100%; /*ocupar el total del ancho del espacio de su padre directo*/
+    height: 100%; /*ocupar el total del alto del espacio de su padre directo*/
+    padding-right: 36px;
+}
+.menu__texto{
+    text-decoration: none;
+    color: #f7eadf;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 27px;
+}
+.menu__pagina{
+    text-decoration: none;
+    color: #454545;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 27px;
+}
+.menu__texto:hover{
+color: #545454;
+}
+/*cuerpo de pagina general*/
+main{
+    padding: 36px;
+}
+/*cuerpo de pagina index*/
+section div a{
+    text-decoration: none;
+    color: #f7eadf;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.index__cajas__titulo{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 54px;
+}
+.index__cajas__texto{
+    padding-left: 45px;
+    padding-right: 45px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 22px;
+}
+.index__cajas__grid{
+  display: grid;
+  grid-template-columns: repeat (3, 270px);
+  grid-template-rows: 450px 270px 270px 270px;
+  gap: 18px;
+  grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+  "index__cajas__grid__bienvenida index__cajas__grid__bienvenida index__cajas__grid__bienvenida"
+  "index__cajas__grid__about index__cajas__grid__clases index__cajas__grid__clases"
+  "index__cajas__grid__agenda index__cajas__grid__agenda index__cajas__grid__contacto"
+  "index__cajas__grid__blog index__cajas__grid__blog index__cajas__grid__blog"
+}
+.index__cajas__grid__bienvenida{
+    grid-area: index__cajas__grid__bienvenida; /*indica el nombre del área anteriormente posicionada dentro de la grilla con grid-template-area en la etiqueta padre (cajas__grid)*/
+    /*background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAWJ3KFN092qW7qvW2kU_iMm0yE9plaZtvQBzE1lPusnop93S7q-BZAeHsKnUVdKf1LPcHWqkJS7AfK3pVj43g3LFn3C1zn47vwDeO4g4kKYOielgY2wmOZRWkrbQtPcxraxMHqNJpbefuvi5qHbck5r-1-Mpqk_LwpZ1x1pWmqA6czZ9HuRJLHkD4/s1600/instructora-de-yoga-dando-clase-a-grupo.webp");*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /*ajusta la imagen al tamaño especificado para visualizarla completa*/
+    background-color: #9c6785;
+    background-blend-mode:exclusion;
+}
+.index__cajas__grid__about{
+    grid-area: index__cajas__grid__about; /*indica el nombre del área anteriormente posicionada dentro de la grilla con grid-template-area en la etiqueta padre (cajas__grid)*/
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb1rb__x4Cesk_IR_GMvjYKcFy0Jfn3W8PLqQiGReZI3Dz2I5t90M2LkrRnkBROBWB28Zhzkz6rqMt2bPdxpejtQZgQtJjk5muSAhEr27lFvKu-uiHSTHL2h1kJLMOM_kABa5XxvZIAiG3nEcGadio9QN4N_x1lx3nY1x_5_hm8b3VlZ5Zx3xgJ5X8/s1600/mujer-joven-practicando-yoga-equilibrio-su-cuerpo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /*ajusta la imagen al tamaño especificado para visualizarla completa*/
+    background-color: #454545;
+    background-blend-mode:exclusion;
+}
+.index__cajas__grid__about:hover{
+    background-color: #9c6785;
+    background-blend-mode: multiply;
+    opacity: 1;
+    color: #f7eadf;
+}
+.index__cajas__grid__clases{
+    grid-area: index__cajas__grid__clases;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgGCStRnzT4-S6btidiz-oVwlRbapWwb0d-Fs0gLpMpVRPc6aKG7TtdfSJPj027eOV9lEiN9dPHtZbZ59_w9j7YFJX9hRLw3e7zlqZiUovs7b45I0u94jdkjKB1_y8SwbLivlGmtbFHojgp2mYJ_hcsacRgR6s5Bh6yUWHm7s8pf6a2iGHYuuGWxxnr/s1600/chica_con_yoga_mat.webp");
+    background-repeat: no-repeat;
+    background-position: center center; /*muestra el centro de la imagen*/
+    background-size: cover; /*ajusta la imagen al tamaño especificado para visualizarla completa*/
+    background-color: #454545;
+    background-blend-mode:exclusion;
+}
+.index__cajas__grid__clases:hover{
+    background-color: #9c6785;
+    background-blend-mode: multiply;
+    opacity: 1;
+    color: #f7eadf;
+}
+.index__cajas__grid__agenda{
+    grid-area: index__cajas__grid__agenda;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUq_EEvliI37QyANJvG3c5BF8BDk_knz5OT7L4pb5h-T5MvyayWX2IjDLH2f8gB653b_CdTmpIpJu5ZudmMFcFcdlVW9ts2yIFzVEZ78sNM1WlIMXCIMtUEaqHMJ75b32Wk_slpmdCKTsKRwGb7Gj4pwnAqggt2ZVdNxoknH9CtSVdfL2zXQivMzFa/s1600/mujeres-jovenes-meditando-en-grupo.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /*ajusta la imagen al tamaño especificado para visualizarla completa*/
+    background-color: #454545;
+    background-blend-mode:exclusion;
+}
+.index__cajas__grid__agenda:hover{
+    background-color: #9c6785;
+    background-blend-mode: multiply;
+    opacity: 1;
+    color: #f7eadf;
+}
+.index__cajas__grid__contacto{
+    grid-area: index__cajas__grid__contacto;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhnrwOCipJNsAUFCzWo57dF34NGu1xb9GFlmCJZi9WFgjYu9Xd8A2AWzvtyVfQUGxQxCiNtfLemECIFYtGHjDWns03WJixTB3QXSR-3OgvU1X1kmn3eRF09sJ51d88nahUx3aUlRJbjmyx6DdpoJXbsEjGWNVDMuseIuLgNc79UBlif-8GM3D6JfvvN/s1600/piedra_camino_arena.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /*ajusta la imagen al tamaño especificado para visualizarla completa*/
+    background-color: #454545;
+    background-blend-mode:exclusion;
+}
+.index__cajas__grid__contacto:hover{
+    background-color: #9c6785;
+    background-blend-mode: multiply;
+    opacity: 1;
+    color: #f7eadf;
+}
+.index__cajas__grid__blog{
+    grid-area: index__cajas__grid__blog;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgP5pyli4VRnh10Aw5H8igTTWHkwxwK7qTNdm6-VsZZE9XcEzi1Wf7sGei95UadvEQjd5SSmVZ84zVuvN1VtOJUyUlzMhVPjvhc7MC8YTOpn1QWV2w3n_R4UZkNyXGnCzt5g6-QWFnJ4gJ6SMn9-YJ8us-WwQRKU8Q0EJufF_lR6SecX4k4c0cngZpw/s1600/estatua-de-buda-meditando.jpg");
+    background-repeat: no-repeat;
+    background-position: center center; /*muestra el centro de la imagen*/
+    background-size: cover; /*ajusta la imagen al tamaño especificado para visualizarla completa*/
+    background-color: #454545;
+    background-blend-mode:exclusion;
+}
+.index__cajas__grid__blog:hover{
+    background-color: #9c6785;
+    background-blend-mode: multiply;
+    opacity: 1;
+    color: #f7eadf;
+}
+/*cuerpo de pagina about*/
+.about__seccion__primera__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__primera__grid__texto about__seccion__primera__grid__imagen"
+}
+.about__seccion__primera__grid__texto{
+    grid-area: about__seccion__primera__grid__texto;
+    text-align: left;
+}
+.about__seccion__primera__grid__imagen{
+    grid-area: about__seccion__primera__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__seccion__segunda__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__segunda__grid__texto about__seccion__segunda__grid__imagen"
+}
+.about__seccion__segunda__grid__texto{
+    grid-area: about__seccion__segunda__grid__texto;
+    text-align: left;
+}
+.about__seccion__segunda__grid__imagen{
+    grid-area: about__seccion__segunda__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__seccion__tercera__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__tercera__grid__texto about__seccion__tercera__grid__imagen"
+}
+.about__seccion__tercera__grid__texto{
+    grid-area: about__seccion__tercera__grid__texto;
+    text-align: left;
+}
+.about__seccion__tercera__grid__imagen{
+    grid-area: about__seccion__tercera__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*cuerpo de pagina clases*/
+.clases__seccion__primera__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "clases__seccion__primera__grid__texto clases__seccion__primera__grid__imagen"
+}
+.clases__seccion__primera__grid__texto{
+    grid-area: clases__seccion__primera__grid__texto;
+    text-align: left;
+}
+.clases__seccion__primera__grid__imagen{
+    grid-area: clases__seccion__primera__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.clases__seccion__segunda__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "clases__seccion__segunda__grid__texto clases__seccion__segunda__grid__imagen"
+}
+.clases__seccion__segunda__grid__texto{
+    grid-area: clases__seccion__segunda__grid__texto;
+    text-align: left;
+}
+.clases__seccion__segunda__grid__imagen{
+    grid-area: clases__seccion__segunda__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.clases__seccion__tercera__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__tercera__grid__texto about__seccion__tercera__grid__imagen"
+}
+.clases__seccion__tercera__grid__texto{
+    grid-area: about__seccion__tercera__grid__texto;
+    text-align: left;
+}
+.clases__seccion__tercera__grid__imagen{
+    grid-area: about__seccion__tercera__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.clases__seccion__cuarta__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__cuarta__grid__texto about__seccion__cuarta__grid__imagen"
+}
+.clases__seccion__cuarta__grid__texto{
+    grid-area: about__seccion__cuarta__grid__texto;
+    text-align: left;
+}
+.clases__seccion__cuarta__grid__imagen{
+    grid-area: about__seccion__cuarta__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*cuerpo de pagina agenda*/
+.agenda__seccion__primera__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "agenda__seccion__primera__grid__texto agenda__seccion__primera__grid__imagen"
+}
+.agenda__seccion__primera__grid__texto{
+    grid-area: agenda__seccion__primera__grid__texto;
+    text-align: left;
+}
+.agenda__seccion__primera__grid__imagen{
+    grid-area: agenda__seccion__primera__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.agenda__seccion__segunda__grid{
+    padding: 36px;
+    justify-content: center;
+}
+/*cuerpo de pagina contacto*/
+.contacto__seccion__primera__grid{
+    display: grid;
+    grid-template-columns: 450px 360px;
+    grid-template-rows:  450px;
+    gap: 18px;
+    padding: 36px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "contacto__seccion__primera__grid__texto contacto__seccion__primera__grid__imagen"
+}
+.contacto__seccion__primera__grid__texto{
+    grid-area: contacto__seccion__primera__grid__texto;
+    text-align: left;
+}
+.contacto__seccion__primera__grid__imagen{
+    grid-area: contacto__seccion__primera__grid__imagen;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*pie de página*/
+.pie{
+    color: #f7eadf;
+    background-color: #9c6785;
+    display: flex;
+    justify-content:space-around;
+}
+.pie__titulo{
+    font-size: 36px;
+    font-family: 'Bebas Neue', cursive;
+}
+.pie__redes{
+    padding: 18px;
+    display: flex;
+    flex-direction: column; /*distribuye de manera encolumnada todos los elementos dentro de pie__redes*/
+}
+.pie__redes__iconos{
+    list-style: none; /*quita los puntos de los items*/
+    display: flex; /*distribuye horizontalmente los iconos*/
+    gap: 9px; /*establece una separación entre los iconos*/
+}
+.icono{
+    width: 36px;
+    height: 36px;
+}
+.pie__ubicacion{
+    padding: 18px;
+    display: flex;
+    flex-direction: column; /*distribuye de manera encolumnada todos los elementos dentro de pie__unicacion*/
+}
+.pie__maps{
+    padding: 18px;
+}
+/*media query max 1007px*/
+@media screen and (max-width: 1007px){
+    .pie{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+}
+}
+/*media query max 768px*/
+@media screen and (max-width: 768px){
+    .pie{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+}
+.index__cajas__grid{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(5, 180px);
+  gap: 9px;
+  grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+  "index__cajas__grid__about"
+  "index__cajas__grid__clases"
+  "index__cajas__grid__agenda"
+  "index__cajas__grid__contacto"
+  "index__cajas__grid__blog"
+}
+.about__seccion__primera__grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  270px;
+    gap: 9px;
+    padding: 27px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__primera__grid__texto"
+    "about__seccion__primera__grid__imagen"
+}
+.about__seccion__segunda__grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  270px;
+    gap: 9px;
+    padding: 27px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__segunda__grid__texto"
+    "about__seccion__segunda__grid__imagen"
+}
+.about__seccion__tercera__grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  270px;
+    gap: 18px;
+    padding: 27px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "about__seccion__tercera__grid__texto"
+    "about__seccion__tercera__grid__imagen"
+}
+.clases__seccion__primera__grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  270px;
+    gap: 9px;
+    padding: 27px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "clases__seccion__primera__grid__texto"
+    "clases__seccion__primera__grid__imagen"
+}
+.clases__seccion__segunda__grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  270px;
+    gap: 9px;
+    padding: 27px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "clases__seccion__segunda__grid__texto"
+    "clases__seccion__segunda__grid__imagen"
+}
+.clases__seccion__tercera__grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows:  270px;
+    gap: 18px;
+    padding: 27px;
+    justify-content: center;
+    grid-template-areas: /*indica el nombre y la posición concreta de cada área dentro de la grilla*/
+    "clases__seccion__tercera__grid__texto"
+    "clases__seccion__tercera__grid__imagen"
+}
+}
